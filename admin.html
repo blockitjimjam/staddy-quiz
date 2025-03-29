@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <script type="module" src="./js/admin.js"></script>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    <div class="admin-panel">
+        <h1>Admin Panel</h1>
+
+        <!-- Status and Round Controls -->
+        <div>
+            <label for="status">Game Status:</label>
+            <select id="status">
+                <option value="Setting up...">Setting up...</option>
+                <option value="Starting...">Starting...</option>
+                <option value="Playing">Playing</option>
+                <option value="Round finished">Round finished</option>
+                <option value="Processing results...">Processing results</option>
+                <option value="Results confirmed">Results processed</option>
+            </select>
+            <button id="updateStatus">Update Status</button>
+        </div>
+        <div>
+            <label for="round">Round:</label>
+            <input type="number" id="round" min="1" max="8">
+            <button id="updateRound">Update Round</button>
+        </div>
+        <div>
+            <label for="mins">Set timer:</label>
+            <input type="number" id="mins" min="0" max="59" placeholder="Minutes">
+            <input type="number" id="secs" min="0" max="60" placeholder="Seconds">
+            <button id="setTimer">Set Timer</button>
+
+        <!-- Team Management -->
+        <div>
+            <h2>Manage Teams</h2>
+            <input type="text" id="teamName" placeholder="Enter Team Name">
+            <button id="addTeam">Add Team</button>
+        </div>
+        <div>
+            <h2>Published Team Scores</h2>
+            <table id="teamsTable">
+                <thead>
+                    <tr>
+                        <th>Team Name</th>
+                        <th>Total Points</th>
+                        <th>Round 1</th>
+                        <th>Round 2</th>
+                        <th>Round 3</th>
+                        <th>Round 4</th>
+                        <th>Round 5</th>
+                        <th>Round 6</th>
+                        <th>Round 7</th>
+                        <th>Round 8</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <h2>Edit Scores</h2>
+            <table id="editableTeamsTable">
+                <thead>
+                    <tr>
+                        <th>Team Name</th>
+                        <th>Total Points</th>
+                        <th>Round 1</th>
+                        <th>Round 2</th>
+                        <th>Round 3</th>
+                        <th>Round 4</th>
+                        <th>Round 5</th>
+                        <th>Round 6</th>
+                        <th>Round 7</th>
+                        <th>Round 8</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button id="updateScores">Update Scores</button>
+        </div>
+    </div>
+</body>
+</html>

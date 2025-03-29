@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Quiz Results</title>
+    <script type="module" src="./js/view.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="topbar">
+        <div id="title"><h1>Live Quiz Results</h1></div>
+        <div id="round"><h1>Round: <span id="currentRound">1</span></h1></div>
+        <div id="time"><h1>00:00</h1></div>
+        <div id="status"><h1>Status: <span id="currentStatus">Setting Up</span></h1></div>
+    </div>
+    
+    <div class="results">
+        <h2>Team Rankings</h2>
+        <table id="teamsTable">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Team Name</th>
+                    <th>Total Score</th>
+                    <th>Round 1</th>
+                    <th>Round 2</th>
+                    <th>Round 3</th>
+                    <th>Round 4</th>
+                    <th>Round 5</th>
+                    <th>Round 6</th>
+                    <th>Round 7</th>
+                    <th>Round 8</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+</html>

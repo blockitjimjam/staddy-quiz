@@ -113,6 +113,13 @@ onValue(ref(db, "teams"), (snapshot) => {
       // Position
       const positionCell = document.createElement("td");
       positionCell.textContent = index + 1; // 1-based index
+      if (positionCell.textContent == "1") {
+        positionCell.style.backgroundImage = "linear-gradient(to bottom right,rgb(173, 142, 0), #fff,rgb(129, 110, 0),rgb(173, 142, 0), #fff,rgb(129, 110, 0))";
+      } else if (positionCell.textContent == "2") {
+        positionCell.style.backgroundImage = "linear-gradient(to bottom right,rgb(192, 192, 192), #fff,rgb(128, 128, 128),rgb(192, 192, 192), #fff,rgb(128, 128, 128))";
+      } else if (positionCell.textContent == "3") {
+        positionCell.style.backgroundImage = "linear-gradient(to bottom right,rgb(205, 127, 50), #fff,rgb(139, 85, 33),rgb(205, 127, 50), #fff,rgb(139, 85, 33))";
+      }
       row.appendChild(positionCell);
 
       // Team Name
